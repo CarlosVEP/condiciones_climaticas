@@ -1,5 +1,7 @@
 #include <Arduino.h>
 #include <DHT.h>
+
+//no recomendable usar define ya que lo que hace es reemplazar el texto en el preprocesador, es mejor usar const
 #define DHTPIN 15
 #define DHTTYPE DHT22
 DHT dht(DHTPIN,DHTTYPE);

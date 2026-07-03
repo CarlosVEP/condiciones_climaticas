@@ -6,6 +6,7 @@
 #define DHTTYPE DHT22
 DHT dht(DHTPIN,DHTTYPE);
 
+//Si el valor se conoce en tiempo de compilación, suele preferirse constexpr para declarar constantes, ya que permite al compilador optimizar el código y mejorar la seguridad del tipo de datos.
 const int pinLDR = 34;
 const int ledRojo = 27;
 const int ledAmarillo = 14;

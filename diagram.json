@@ -47,11 +47,17 @@
     {
       "type": "wokwi-dht22",
       "id": "dht1",
-      "top": -249.3,
+      "top": -230.1,
       "left": 234.6,
       "attrs": { "temperature": "-7.3" }
     },
-    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": -112, "left": -8.8, "attrs": {} }
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -102.4,
+      "left": -8.8,
+      "attrs": {}
+    }
   ],
   "connections": [
     [ "esp:TX", "$serialMonitor:RX", "", [] ],
@@ -68,10 +74,12 @@
     [ "ldr1:GND", "esp:GND.2", "black", [ "h28.8", "v-0.4", "h124.8" ] ],
     [ "ldr1:AO", "esp:34", "green", [ "h19.2", "v-0.7" ] ],
     [ "dht1:VCC", "bb1:tp.1", "red", [ "h-376" ] ],
-    [ "ldr1:VCC", "bb1:tp.2", "red", [ "h0", "v-28.8", "h-278.4" ] ],
+    [ "ldr1:VCC", "bb1:tp.2", "red", [ "v-19.2", "h-280" ] ],
     [ "bb1:tp.25", "esp:3V3", "red", [ "v0.3", "h68.8" ] ],
     [ "r1:1", "bb1:2t.e", "", [ "$bb" ] ],
     [ "r1:2", "bb1:2b.i", "", [ "$bb" ] ],
+    [ "led1:A", "bb1:3t.c", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:2t.c", "", [ "$bb" ] ],
     [ "r2:1", "bb1:7t.e", "", [ "$bb" ] ],
     [ "r2:2", "bb1:7b.i", "", [ "$bb" ] ],
     [ "r3:1", "bb1:12t.e", "", [ "$bb" ] ],
@@ -79,9 +87,7 @@
     [ "led2:A", "bb1:8t.c", "", [ "$bb" ] ],
     [ "led2:C", "bb1:7t.c", "", [ "$bb" ] ],
     [ "led3:A", "bb1:13t.c", "", [ "$bb" ] ],
-    [ "led3:C", "bb1:12t.c", "", [ "$bb" ] ],
-    [ "led1:A", "bb1:3t.c", "", [ "$bb" ] ],
-    [ "led1:C", "bb1:2t.c", "", [ "$bb" ] ]
+    [ "led3:C", "bb1:12t.c", "", [ "$bb" ] ]
   ],
   "dependencies": {}
 }

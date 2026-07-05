@@ -1,12 +1,10 @@
 #include <Arduino.h>
 #include <DHT.h>
 
-//no recomendable usar define ya que lo que hace es reemplazar el texto en el preprocesador, es mejor usar const
 constexpr int DHTPIN = 15;
 constexpr char DHTTYPE = DHT22;
 DHT dht(DHTPIN,DHTTYPE);
 
-//Si el valor se conoce en tiempo de compilación, suele preferirse constexpr para declarar constantes, ya que permite al compilador optimizar el código y mejorar la seguridad del tipo de datos.
 constexpr int PIN_LDR = 34;
 constexpr int LED_ROJO = 27;
 constexpr int LED_AMARILLO = 14;
